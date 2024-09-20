@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Soundboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Med Alert Soundboard</h1>
+
+    <button class="button" onclick="playSound('alert1')">Med Alert 1</button>
+    <button class="button" onclick="playSound('alert2')">Med Alert 2</button>
+    <button class="button" onclick="playSound('alert3')">Med Alert 3</button>
+
+    <audio id="alert1" src="your-audio-files/alert1.mp3"></audio>
+    <audio id="alert2" src="your-audio-files/alert2.mp3"></audio>
+    <audio id="alert3" src="your-audio-files/alert3.mp3"></audio>
+
+    <script>
+        function playSound(id) {
+            document.getElementById(id).play();
+        }
+    </script>
+</body>
+</html>
